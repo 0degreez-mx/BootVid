@@ -13,13 +13,28 @@ namespace BootVid
         public SplashScreenWindow(string videoPath)
         {
             // Configurar la ventana
-            Width = 1920;
-            Height = 1080;
             WindowStyle = WindowStyle.None;
             ResizeMode = ResizeMode.NoResize;
+            //WindowStartupLocation = WindowStartupLocation.Manual;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            WindowState = WindowState.Maximized;
             Background = System.Windows.Media.Brushes.Black;
             Topmost = true;
+
+            Width = SystemParameters.PrimaryScreenWidth;
+            Height = SystemParameters.PrimaryScreenHeight;
+            //var screenWidth = SystemParameters.PrimaryScreenWidth;
+            //var screenHeight = SystemParameters.PrimaryScreenHeight;
+
+            /*Left = 0;
+            Top = 0;
+            if (screenWidth / screenHeight != 16.0 / 10.0)
+            {
+                //Width = 1280;
+                //Height = 800;
+                Left = (screenWidth - 1280) / 2;
+                Top = (screenHeight - 800) / 2;
+            }*/
 
             // Crear y agregar el UserControl
             var splashControl = new SplashScreenControl(videoPath);
