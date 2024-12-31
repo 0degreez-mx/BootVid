@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Media3D;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace BootVid
 {
@@ -23,6 +25,9 @@ namespace BootVid
 
             Width = SystemParameters.PrimaryScreenWidth;
             Height = SystemParameters.PrimaryScreenHeight;
+            KeyDown += OnKeyDown;
+            PreviewKeyDown += OnPreviewKeyDown;
+            Focusable = true;
             //var screenWidth = SystemParameters.PrimaryScreenWidth;
             //var screenHeight = SystemParameters.PrimaryScreenHeight;
 
@@ -41,6 +46,23 @@ namespace BootVid
             splashControl.SplashScreenEnded += () => this.Close();
 
             Content = splashControl;
+            
+        }
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Escape || e.Key == Key.B)
+            {
+                this.Close();
+            }
+        }
+
+        private void OnPreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                //e.Handled = true;
+            }
         }
     }
 }

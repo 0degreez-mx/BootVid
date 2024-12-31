@@ -7,5 +7,13 @@
                       UnloadedBehavior="Stop"
                       Stretch="Fill"
                       MediaEnded="OnMediaEnded"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5" MaxHeight="40" MinHeight="32">
+            <Image Source="/BootVid;component/Resources/controller_b_icon.png" Width="32" Height="32" Margin="10,1,10,1"/>
+            
+            <TextBlock Text="or" Foreground="White" FontSize="14" VerticalAlignment="Center"/>
+            <Image Source="/BootVid;component/Resources/keyboard_esc_icon.png" Width="32" Height="32" Margin="10,1,10,1"/>
+            
+            <TextBlock Text="to skip" Foreground="White" FontSize="14" VerticalAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </UserControl>
