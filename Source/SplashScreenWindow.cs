@@ -7,11 +7,15 @@ using System.Windows.Media.Media3D;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using SharpDX.XInput;
+using System.Windows.Threading;
 
 namespace BootVid
 {
     public class SplashScreenWindow : Window
     {
+        private readonly Controller controller;
+        private readonly DispatcherTimer inputTimer;
         public SplashScreenWindow(string videoPath)
         {
             // Configurar la ventana
@@ -40,19 +44,39 @@ namespace BootVid
                 Left = (screenWidth - 1280) / 2;
                 Top = (screenHeight - 800) / 2;
             }*/
+            controller = new Controller(UserIndex.One);
+            inputTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(100)
+            };
+            inputTimer.Tick += CheckGamepadInput;
+            inputTimer.Start();
 
-            // Crear y agregar el UserControl
             var splashControl = new SplashScreenControl(videoPath);
-            splashControl.SplashScreenEnded += () => this.Close();
+            splashControl.SplashScreenEnded += () =>
+            {
+                inputTimer.Stop();
+                this.Close();
+            };
 
             Content = splashControl;
             
         }
-        private void OnKeyDown(object sender, KeyEventArgs e)
+        private void CheckGamepadInput(object sender, EventArgs e)
         {
-
-            if (e.Key == Key.Escape || e.Key == Key.B)
+            if (GamepadInputHandler.IsButtonPressed(controller, GamepadButtonFlags.B))
             {
+
+                inputTimer.Stop();
+                this.Close();
+            }
+        }
+
+        private void OnKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                inputTimer.Stop();
                 this.Close();
             }
         }

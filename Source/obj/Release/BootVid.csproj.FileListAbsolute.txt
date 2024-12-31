@@ -24,8 +24,13 @@ I:\Github\BootVid\Source\bin\Release\icon.png
 I:\Github\BootVid\Source\bin\Release\BootVid.dll
 I:\Github\BootVid\Source\bin\Release\BootVid.pdb
 I:\Github\BootVid\Source\bin\Release\Playnite.SDK.dll
+I:\Github\BootVid\Source\bin\Release\SharpDX.dll
+I:\Github\BootVid\Source\bin\Release\SharpDX.XInput.dll
 I:\Github\BootVid\Source\bin\Release\Playnite.SDK.pdb
 I:\Github\BootVid\Source\bin\Release\Playnite.SDK.xml
+I:\Github\BootVid\Source\bin\Release\SharpDX.pdb
+I:\Github\BootVid\Source\bin\Release\SharpDX.XInput.pdb
+I:\Github\BootVid\Source\bin\Release\SharpDX.XInput.xml
 I:\Github\BootVid\Source\obj\Release\BootVid.csproj.AssemblyReference.cache
 I:\Github\BootVid\Source\obj\Release\App.baml
 I:\Github\BootVid\Source\obj\Release\BootVidSettingsView.baml
