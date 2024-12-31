@@ -1,5 +1,11 @@
 AddonId: BootVid_5c4269c6-48e8-44c6-a9a9-c72c1090d9f1
 Packages:
+  - Version: 1.2
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2024-12-31
+    PackageUrl: https://github.com/0degreez-mx/BootVid/raw/refs/heads/main/Releases/v1.2/BootVid_5c4269c6-48e8-44c6-a9a9-c72c1090d9f1_1.2.pext
+    Changelog:
+      - Added skip function if button B pressed in game controller or Esc key on keyboard
   - Version: 1.1
     RequiredApiVersion: 6.2.0
     ReleaseDate: 2024-12-25
