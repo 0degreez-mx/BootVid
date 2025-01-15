@@ -23,9 +23,12 @@ I:\Github\BootVid\Source\bin\Release\Localization\en_US.xaml
 I:\Github\BootVid\Source\bin\Release\icon.png
 I:\Github\BootVid\Source\bin\Release\BootVid.dll
 I:\Github\BootVid\Source\bin\Release\BootVid.pdb
+I:\Github\BootVid\Source\bin\Release\AudioSwitcher.AudioApi.CoreAudio.dll
+I:\Github\BootVid\Source\bin\Release\AudioSwitcher.AudioApi.dll
 I:\Github\BootVid\Source\bin\Release\Playnite.SDK.dll
 I:\Github\BootVid\Source\bin\Release\SharpDX.dll
 I:\Github\BootVid\Source\bin\Release\SharpDX.XInput.dll
+I:\Github\BootVid\Source\bin\Release\System.Runtime.InteropServices.dll
 I:\Github\BootVid\Source\bin\Release\Playnite.SDK.pdb
 I:\Github\BootVid\Source\bin\Release\Playnite.SDK.xml
 I:\Github\BootVid\Source\bin\Release\SharpDX.pdb

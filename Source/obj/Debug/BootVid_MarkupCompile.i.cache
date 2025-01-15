@@ -4,7 +4,7 @@
 library
 C#
 .cs
-I:\VisualStudioProjects\BootVid\obj\Debug\
+I:\Github\BootVid\Source\obj\Debug\
 BootVid
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 3725786508
 
-71138670539
-14-1178580176
+9595841361
+142108979841
 App.xaml;BootVidSettingsView.xaml;SplashScreenControl.xaml;
 
 False

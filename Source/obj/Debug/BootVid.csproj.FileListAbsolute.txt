@@ -23,9 +23,17 @@ I:\Github\BootVid\Source\bin\Debug\Localization\en_US.xaml
 I:\Github\BootVid\Source\bin\Debug\icon.png
 I:\Github\BootVid\Source\bin\Debug\BootVid.dll
 I:\Github\BootVid\Source\bin\Debug\BootVid.pdb
+I:\Github\BootVid\Source\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
+I:\Github\BootVid\Source\bin\Debug\AudioSwitcher.AudioApi.dll
 I:\Github\BootVid\Source\bin\Debug\Playnite.SDK.dll
+I:\Github\BootVid\Source\bin\Debug\SharpDX.dll
+I:\Github\BootVid\Source\bin\Debug\SharpDX.XInput.dll
+I:\Github\BootVid\Source\bin\Debug\System.Runtime.InteropServices.dll
 I:\Github\BootVid\Source\bin\Debug\Playnite.SDK.pdb
 I:\Github\BootVid\Source\bin\Debug\Playnite.SDK.xml
+I:\Github\BootVid\Source\bin\Debug\SharpDX.pdb
+I:\Github\BootVid\Source\bin\Debug\SharpDX.XInput.pdb
+I:\Github\BootVid\Source\bin\Debug\SharpDX.XInput.xml
 I:\Github\BootVid\Source\obj\Debug\BootVid.csproj.AssemblyReference.cache
 I:\Github\BootVid\Source\obj\Debug\App.baml
 I:\Github\BootVid\Source\obj\Debug\BootVidSettingsView.baml

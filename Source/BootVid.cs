@@ -1,12 +1,10 @@
-﻿using Playnite.SDK;
+﻿using AudioSwitcher.AudioApi.CoreAudio;
+using AudioSwitcher.AudioApi.Session;
+using Playnite.SDK;
 using Playnite.SDK.Events;
-using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Controls;
 
 namespace BootVid
@@ -53,17 +51,46 @@ namespace BootVid
             // Add code to be executed when game is uninstalled.
         }
 
+        private IAudioSession _session;
+
         public override void OnApplicationStarted(OnApplicationStartedEventArgs args)
         {
+            
             if (PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Fullscreen)
             {
                 // Solo mostrar el splash screen si hay un video configurado
                 if (!string.IsNullOrEmpty(settings.Settings.VideoPath))
                 {
+                    var controller = new CoreAudioController();
+                    var sessions = controller.DefaultPlaybackDevice.SessionController.ActiveSessions();
+
+                    foreach (var session in sessions)
+                    {
+                        if (session.DisplayName.Contains("Playnite")) // Identifica el proceso
+                        {
+                            _session = session;
+                            _session.Volume = 0.0; // Mutea Playnite
+                            break;
+                        }
+                    }
+                    var playniteProcess = Process.GetCurrentProcess();
+                    IntPtr mainWindowHandle = playniteProcess.MainWindowHandle;
+
+                    // Minimizar la ventana principal si se encuentra
+                    if (mainWindowHandle != IntPtr.Zero)
+                    {
+                        NativeMethods.ShowWindow(mainWindowHandle, NativeMethods.SW_HIDE);
+                    }
                     var splashScreen = new SplashScreenWindow(settings.Settings.VideoPath);
                     splashScreen.ShowDialog();
+                    _session.Volume = 100.0;
+                    if (mainWindowHandle != IntPtr.Zero)
+                    {
+                        NativeMethods.ShowWindow(mainWindowHandle, NativeMethods.SW_SHOW);
+                    }
                 }
             }
+            
         }
 
         public override void OnApplicationStopped(OnApplicationStoppedEventArgs args)

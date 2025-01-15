@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Media3D;
+﻿using SharpDX.XInput;
+using System;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
-using SharpDX.XInput;
 using System.Windows.Threading;
 
 namespace BootVid
